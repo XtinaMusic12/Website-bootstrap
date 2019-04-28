@@ -1,23 +1,34 @@
 var srbutton = document.getElementById('insertsr');
 var spn;
+var newLi;
+var newSR;
+var ordernb = 0;
+var rsrbutton = document.getElementById('removesr');
 
 srbutton.addEventListener("click", Insert_SR, false);
-
+rsrbutton.addEventListener("click", Remove_LastItem, false);
 
 function Insert_SR() {
     // Prompt User for Special Request:
     spn = prompt("Add a special request to the Menu: you can add up to 5.");
+    // incrementing order number:
+    ordernb++;
     // create new li elements:
-    var spnli = document.createElement("li");
+    newLi = document.createElement("li");
     // add its content:
-    var newSR = document.createTextNode(spn);
+    newSR = document.createTextNode(spn);
     // add the text to the newly created li:
-    spnli.appendChild(newSR);
+    newLi.appendChild(newSR);
 
     // add the newly created element and its content into the DOM 
-    var currentLi = document.getElementById("specialrequest");
-    document.body.insert(spnli, currentLi);
 
-    // spnli.document.getElementById("specialrequest").appendChild(spn);
+    document.getElementById("specialrequest").appendChild(newLi);
+}
+
+function Remove_LastItem() {
+    // removing last child:
+    document.getElementById("specialrequest").removeChild(newLi);
+    // decreasing order number:
+    ordernb -= 1;
 } 
 
