@@ -3,6 +3,7 @@ var spn;
 var newLi;
 var newSR;
 var ordernb = 0;
+var newcount;
 var rsrbutton = document.getElementById('removesr');
 
 srbutton.addEventListener("click", Insert_SR, false);
@@ -13,6 +14,8 @@ function Insert_SR() {
     spn = prompt("Add a special request to the Menu: you can add up to 5.");
     // incrementing order number:
     ordernb++;
+    // add the new count in the DOM:
+    document.getElementById("ordernb").innerHTML = "Number of Special Requests: " + ordernb;
     // create new li elements:
     newLi = document.createElement("li");
     // add its content:
@@ -30,5 +33,7 @@ function Remove_LastItem() {
     document.getElementById("specialrequest").removeChild(newLi);
     // decreasing order number:
     ordernb -= 1;
+    // add the new count in the DOM:
+    document.getElementById("ordernb").innerHTML = "Number of Special Requests: " + ordernb;
 } 
 
