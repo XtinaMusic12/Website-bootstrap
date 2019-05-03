@@ -107,13 +107,15 @@
                             <tr>
                                 <th>Pizza</th>
                                 <td>12.00</td>
-                                <td id="orderpizza"><button class="btn btn-primary" id="removepizza">-</button> 0
-                                    <button class="btn btn-primary" id="addpizza">+</button></td>
+                                <td><button onclick="Remove_Pizza()" class="btn btn-primary" id="removepizza">-</button>
+                                    <input type="text" id="orderpiza" value="0"></input>
+                                    <button onclick="Add_Pizza()" class="btn btn-primary" id="addpizza">+</button></td>
                             </tr>
                             <tr>
                                 <th>Burgers</th>
                                 <td>5.00</td>
-                                <td id="orderburger"><button class="btn btn-primary" id="removeburger">-</button> 0
+                                <td><button class="btn btn-primary" id="removeburger">-</button> <input type="text"
+                                        id="orderburger" value="0"></input>
                                     <button class="btn btn-primary" id="addburger">+</button> </td>
                             </tr>
                         </tbody>
@@ -123,7 +125,7 @@
         </div>
 
 
-        <div class="row">
+        <div class="row m-10">
             <div class="col-12 col-sm-3">
                 <p id="total">Total Price 0 dollars.</p>
             </div>
