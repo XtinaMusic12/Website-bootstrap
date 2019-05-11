@@ -1,3 +1,5 @@
+// document.getElementByID("addpizza").addEventListener("click", add);
+
 var orderpizza = 0;
 var orderburger = 0;
 
@@ -16,10 +18,10 @@ var ordertotal = pizza * orderpizza + burger * orderburger;
 // var btnremoveburger = document.getElementByID('removeburger');
 // var btnaddburger = document.getElementByID('addburger');
 
-document.getElementByID('removepizza').addEventListener("click", Remove_Pizza);
-document.getElementByID('addpizza').addEventListener("click", Add_Pizza);
-document.getElementByID('removeburger').addEventListener("click", Remove_Burger);
-document.getElementByID('addburger').addEventListener("click", Add_Burger);
+//document.getElementByID('removepizza').addEventListener("click", Remove_Pizza);
+
+//document.getElementByID('removeburger').addEventListener("click", Remove_Burger);
+//document.getElementByID('addburger').addEventListener("click", Add_Burger);
 
 // functions:
 function Remove_Pizza() {
@@ -39,12 +41,13 @@ function Remove_Pizza() {
     }
 }
 
-function Add_Pizza() {
-    orderpizza++;
+function add() {
+    console.log("TEST");
+    //orderpizza++;
 
-    document.getElementById("orderpizza").value = orderpizza;
+    //document.getElementById("orderpizza").value = orderpizza;
 
-    document.getElementById("total").innerHTML = "Total Price " + ordertotal + " dollars.";
+    //document.getElementById("total").innerHTML = "Total Price " + ordertotal + " dollars.";
 }
 
 function Remove_Burger() {
