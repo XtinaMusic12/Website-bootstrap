@@ -99,47 +99,62 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group row mb-3">
-                            <label class="col-sm-3 col-md-2 col-form-label">Number of Guests</label>
+                            <label class="col-form-label col-sm-3">Number of Guests</label>
                             <div class="col">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="guests" id="nbguests"></input>
-                                    <label class="form-check-label" for="nbguests">1</label>
+                                    <input id="radio1" class="form-check-input" type="radio" name="nr-guest">
+                                    <label class="form-check-label" for="radio1">1</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="guests" id="nbguests"></input>
-                                    <label class="form-check-label" for="nbguests">2</label>
+                                    <input id="radio2" class="form-check-input" type="radio" name="nr-guest">
+                                    <label class="form-check-label" for="radio2">2</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="guests" id="nbguests"></input>
-                                    <label class="form-check-label" for="nbguests">3</label>
+                                    <input id="radio3" class="form-check-input" type="radio" name="nr-guest">
+                                    <label class="form-check-label" for="radio3">3</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="guests" id="nbguests"></input>
-                                    <label class="form-check-label" for="nbguests">4</label>
+                                    <input id="radio4" class="form-check-input" type="radio" name="nr-guest">
+                                    <label class="form-check-label" for="radio4">4</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="guests" id="nbguests"></input>
-                                    <label class="form-check-label" for="nbguests">5</label>
+                                    <input id="radio5" class="form-check-input" type="radio" name="nr-guest">
+                                    <label class="form-check-label" for="radio5">5</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="guests" id="nbguests"></input>
-                                    <label class="form-check-label" for="nbguests">6</label>
+                                    <input id="radio6" class="form-check-input" type="radio" name="nr-guest">
+                                    <label class="form-check-label" for="radio6">6</label>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label class="col-12 col-sm-3 form-check-label">Date and Time</label>
-                            <div class="form-group col col-sm">
-                                <input class="form-control mr-2" type="text" name="datetime" id="date"
-                                    placeholder="Date">
-                                <input class="form-control mr-2" type="text" name="datetime" id="time"
-                                    placeholder="Time">
+                        <div class="row form-group">
+                            <label class="col-form-label col-3">Section</label>
+                            <div class="btn-group btn-group-toggle col-9" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                    <input type="radio" name="sections" id="option1" autocomplete="off">
+                                    Non-Smoking
+                                </label>
+                                <label class="btn btn-danger">
+                                    <input type="radio" name="sections" id="option2" autocomplete="off">
+                                    Smoking
+                                </label>
                             </div>
                         </div>
-                        <div class="form-group row">
+
+                        <div class="row form-group">
+                            <label class="col-form-label col-sm-3 col-12">Date and Time</label>
+                            <div class="form-inline col-sm col">
+                                <input type="text" class="form-control mr-3" placeholder="Date">
+                                <input type="text" class="form-control mr-3" placeholder="Time">
+                            </div>
+                        </div>
+
+                        <div class="row">
                             <div class="col-sm-9 offset-sm-3 col">
-                                <input class="btn btn-secondary offset-1" type="button" value="Cancel">
-                                <input class="btn btn-primary ml-1" type="button" value="Reserve">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">
+                                    Cancel
+                                </button>
+                                <button class="btn btn-primary">Reserve</button>
                             </div>
                         </div>
                     </form>
