@@ -240,6 +240,15 @@
                         <span class="carousel-control-prev-icon"></span></a>
                     <a href="#mycarousel" role="button" class="carousel-control-next" data-slide="next">
                         <span class="carousel-control-next-icon"></span></a>
+
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -278,7 +287,8 @@
                         </h2>
                         <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing
                             appetizers,
-                            six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for
+                            six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All
+                            for
                             just
                             $19.99 per person </p>
                     </div>
@@ -300,7 +310,8 @@
                         <h4>Executive Chef</h4>
                         <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International
                             experience having worked closely with
-                            whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion
+                            whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian
+                            fusion
                             experiences. </p>
                     </div>
                 </div>
@@ -363,6 +374,17 @@
             $('[data-toggle="tooltip"]').tooltip();
         })
     </script> -->
+    <script>
+        $(document).ready(function () {
+            $('#mycarousel').carousel({ interval: 2000 });
+            $('#carousel-pause').click(function () {
+                $('#mycarousel').carousel('pause');
+            });
+            $('#carousel-play').click(function () {
+                $('#mycarousel').carousel('cycle');
+            });
+        });
+    </script>
 </body>
 
 </html>
