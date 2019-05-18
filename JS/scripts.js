@@ -14,10 +14,10 @@ $(document).ready(function () {
     });
 });
 
-$('a').click(function () {
+$('#loginModalBTN').click(function () {
     $('#loginModal').modal('show');
 });
 
-$('button').click(function () {
+$('#reservationBTN').click(function () {
     $('#reservation').modal('show');
 });

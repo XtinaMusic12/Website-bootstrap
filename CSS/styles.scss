@@ -71,19 +71,15 @@ body{
     position: absolute;
     bottom: 0px;
 }
-.modal {
-    height: 300px;
-}
 
 .modal-header {
     background: $background-dark;
     color: $text-color;
+   .close:hover {
+        color: $text-color;
+    }
 }
 
 .modal-body {
     background: $background-pale;
-}
-
-.close:hover {
-    color: $text-color;
 }
