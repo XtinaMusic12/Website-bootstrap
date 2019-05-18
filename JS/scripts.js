@@ -13,3 +13,7 @@ $(document).ready(function () {
         }
     });
 });
+
+$('button').click(function () {
+    $('#loginModal').modal('show');
+});
