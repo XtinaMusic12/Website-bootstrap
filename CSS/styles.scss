@@ -75,7 +75,10 @@ body{
 .modal-header {
     background: $background-dark;
     color: $text-color;
-   .close:hover {
+    .close:hover {
+    color: $text-color;
+    }
+    .close {
         color: $text-color;
     }
 }
